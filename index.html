@@ -12,7 +12,7 @@
     <script src="assets/index.js"></script>
 </head>
 
-<body>
+<body id="body">
     <div class="modeswitch">
         <a href="#" onclick="switchmode()"><img id="sw-btn" height="20px" width="20px" class="darkmode"
                 src="assets/darkmode.svg" alt="Mode Switch"></a>
@@ -21,7 +21,8 @@
     <div id="details" class="details bg-dark text-white">
         <img id="avatar" class="border-white" src="assets/avatar.jpg" alt="">
         <label class="title">AMEER MUHAMMED</label>
-        <p style="margin: 5px;"><img id="apple-logo" src="assets/apple.svg" width="4%" height="4%"> Developer | Tech Mentor</p>
+        <p style="margin: 5px;"><img id="apple-logo" src="assets/apple.svg" width="4%" height="4%"> Developer | Tech
+            Mentor</p>
         <label class="subtitle">Computer Science Enthusiast</label>
         <div id="social">
             <a href="https://www.linkedin.com/in/ameermuhammed" target="_blank"><img id="likendin-icon"
@@ -32,11 +33,18 @@
         </div>
         <div class="btm-btns">
             <hr style="opacity: 0.2;">
-            <a style="float: left;" href="https://ameermuhammed.github.io/Ameer-Muhammed-Resume-Updated.pdf" target="_blank">RESUME<img class="btnimg icon-white" id="resume-icon" src="assets/resume.svg"></a>
-            <a style="float: right;" href="mailto:ami.mullan@gmail.com" target="_blank">CONTACT<img class="btnimg icon-white" id="mail-icon"
-                    src="assets/porfolio.svg"></a>
+            <a style="float: left;" href="https://ameermuhammed.github.io/Ameer-Muhammed-Resume-Updated.pdf"
+                target="_blank">RESUME<img class="btnimg icon-white" id="resume-icon" src="assets/resume.svg"></a>
+            <a style="float: right;" href="mailto:ami.mullan@gmail.com" target="_blank">CONTACT<img
+                    class="btnimg icon-white" id="mail-icon" src="assets/porfolio.svg"></a>
         </div>
     </div>
 </body>
+<script>
+    imgNum = Math.floor(Math.random() * 10) + 1;
+    imgUrl = `url(assets/bg/bg${imgNum}.svg)`;
+    changeImage = () => { return document.getElementById('body').style.backgroundImage = imgUrl; }
+    window.onload = changeImage;
+</script>
 
 </html>
