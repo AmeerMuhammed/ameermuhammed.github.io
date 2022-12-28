@@ -41,10 +41,9 @@
     </div>
 </body>
 <script>
-    imgNum = Math.floor(Math.random() * 10) + 1;
+    imgNum = Math.floor(Math.random() * 5) + 1;
     imgUrl = `url(assets/bg/bg${imgNum}.svg)`;
     changeImage = () => { return document.getElementById('body').style.backgroundImage = imgUrl; }
     window.onload = changeImage;
 </script>
-
 </html>
